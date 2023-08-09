@@ -1,0 +1,114 @@
+body {
+  margin:10px!important;
+  background-image: url("/assets/image/bgimage2.png");
+  background-repeat: repeat;
+  font-family: "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif !important;
+}
+
+.container {
+  background-color:white;
+  min-height:500px;
+  max-width:900px;
+}
+
+.content {
+  min-height:500px;
+  border-top:solid 5px #27ae60;
+  padding-top:20px;
+}
+
+.title {
+  padding-top:25px;
+  font-size:35px;
+}
+
+.title a {
+  text-decoration:none;
+  color: #333;
+}
+
+.subTitle {
+  padding-top:47px;
+  font-size:15px;
+}
+
+.tel {
+  padding-top:15px;
+  margin-bottom:0px;
+  font-size:22px;
+}
+
+.name {
+  font-size:17px;
+}
+
+.footer .row{
+  color: white;
+  padding:10px;
+  background-color: #27ae60;
+}
+
+.nav {
+  font-size:19px;
+}
+
+.nav a {
+  color:#e04a3f;
+}
+
+.nav li.active a {
+  color:#e04a3f!important;
+  background-color:#ffebdb!important;
+}
+
+.nav a:hover {
+  color:#e04a3f!important;
+  background-color:#ffebdb!important;
+}
+
+.main-title {
+  font-size:25px;
+  border-bottom: solid 3px #27ae60;
+}
+
+.sub-title {
+  font-size:23px;
+  padding-left:15px;
+}
+
+.mylist li {
+  list-style-type: none;
+}
+
+.mylist li:before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #20B97B;
+  position: relative;
+  left: -15px;
+  top: -3px;
+}
+
+.infoLeft {
+  font-size:16px;
+  padding-left:40px!important;
+}
+
+.infoRight {
+  font-size:16px;
+  padding-left:40px!important;
+}
+
+#mapCanvas {
+  margin:20px;
+  height:500px;
+}
+
+@media screen and (min-width: 0px) and (max-width : 767px){
+    p, li {
+        font-size:18px;
+    }
+}
