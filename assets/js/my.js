@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // メールアドレスの保護（スパムボット対策）
+  var emailLink = document.getElementById('email-link');
+  if (emailLink) {
+    var user = 'aiba_shouten';
+    var domain = 'yahoo.co.jp';
+    var subject = 'ご注文内容';
+    var body = '以下の内容で注文をお願いします。%0D%0A%0D%0Aお名前:%0D%0Aふりがな:%0D%0A郵便番号:%0D%0Aご住所:%0D%0Aお電話番号:%0D%0AFAX番号:%0D%0A商品名:%0D%0A数量:%0D%0Aお届け希望日:%0D%0Aお届け希望時間帯:%0D%0A';
+
+    var a = document.createElement('a');
+    a.href = 'mailto:' + user + '@' + domain + '?subject=' + subject + '&body=' + body;
+    a.textContent = user + '@' + domain;
+    emailLink.appendChild(a);
+  }
+
   var mapCanvas = document.getElementById('mapCanvas');
 
   // mapCanvasが存在しない場合は処理をスキップ
