@@ -34,7 +34,7 @@ body {
 
 .tel {
   padding-top:15px;
-  margin-bottom:0px;
+  margin-bottom:0;
   font-size:22px;
 }
 
@@ -54,6 +54,7 @@ body {
 
 .nav .nav-link {
   color:#e04a3f;
+  background-color: transparent;
 }
 
 .nav .nav-link.active {
@@ -62,6 +63,11 @@ body {
 }
 
 .nav .nav-link:hover {
+  color:#e04a3f!important;
+  background-color:#ffebdb!important;
+}
+
+.nav .nav-link:focus {
   color:#e04a3f!important;
   background-color:#ffebdb!important;
 }
