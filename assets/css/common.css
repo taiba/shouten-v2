@@ -1,75 +1,243 @@
+/* CSS変数: デザインシステムの基礎 */
+:root {
+  /* スペーシング */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+
+  /* カラーパレット: 和モダンな煎餅屋のイメージ */
+
+  /* ブランドカラー */
+  --color-primary: #27ae60;          /* メイングリーン（和の落ち着き） */
+  --color-primary-light: #2ecc71;    /* 明るいグリーン */
+  --color-primary-dark: #229954;     /* 濃いグリーン */
+
+  --color-accent: #e04a3f;           /* アクセントレッド（伝統的な赤） */
+  --color-accent-light: #e67e73;     /* 明るいレッド */
+
+  /* 背景色 */
+  --color-bg-light: #fcefe5;         /* 薄ベージュ（温かみ） */
+  --color-bg-lighter: #fef9f5;       /* より薄いベージュ */
+  --color-bg-accent: #ffebdb;        /* アクセント背景 */
+
+  /* テキストカラー */
+  --color-text: #333;                /* メインテキスト */
+  --color-text-light: #666;          /* サブテキスト */
+  --color-text-lighter: #999;        /* 補助テキスト */
+
+  /* グレースケール */
+  --color-white: #ffffff;
+  --color-gray-100: #f8f9fa;
+  --color-gray-200: #e9ecef;
+  --color-gray-300: #dee2e6;
+  --color-gray-400: #ced4da;
+  --color-gray-500: #adb5bd;
+  --color-border: #ddd;              /* ボーダー用 */
+
+  /* セマンティックカラー（意味のある色） */
+  --color-success: var(--color-primary);
+  --color-info: #3498db;
+  --color-warning: #f39c12;
+  --color-error: var(--color-accent);
+
+  /* タイポグラフィ */
+  --font-size-h1: 32px;
+  --font-size-h2: 24px;
+  --font-size-h3: 20px;
+  --font-size-base: 16px;
+  --font-size-small: 14px;
+  --font-size-large: 18px;
+
+  --line-height-tight: 1.3;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.8;
+}
+
 body {
-  margin:10px!important;
+  margin: 0 !important;
+  padding: var(--spacing-md) var(--spacing-sm) !important;
   background-image: url("/assets/image/bgimage2.png");
   background-repeat: repeat;
   font-family: "ヒラギノ丸ゴ ProN", "Hiragino Maru Gothic ProN", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif !important;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+}
+
+/* リンクスタイル */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--color-accent-light);
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 統一された見出しスタイル */
+h1, .h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+}
+
+h2, .h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--spacing-md);
+}
+
+h3, .h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-normal);
+  margin-bottom: var(--spacing-sm);
+}
+
+p {
+  margin-bottom: var(--spacing-sm);
+  line-height: var(--line-height-relaxed);
 }
 
 .container {
-  background-color:white;
-  min-height:500px;
-  max-width:900px;
+  background-color: var(--color-white);
+  min-height: 500px;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
 }
 
 .content {
-  min-height:500px;
-  border-top:solid 5px #27ae60;
-  padding-top:20px;
+  min-height: 500px;
+  border-top: solid 5px var(--color-primary);
+  padding: var(--spacing-lg) 0;
+}
+
+/* 統一されたスペーシングクラス */
+.mb-xs { margin-bottom: var(--spacing-xs) !important; }
+.mb-sm { margin-bottom: var(--spacing-sm) !important; }
+.mb-md { margin-bottom: var(--spacing-md) !important; }
+.mb-lg { margin-bottom: var(--spacing-lg) !important; }
+.mb-xl { margin-bottom: var(--spacing-xl) !important; }
+
+.mt-xs { margin-top: var(--spacing-xs) !important; }
+.mt-sm { margin-top: var(--spacing-sm) !important; }
+.mt-md { margin-top: var(--spacing-md) !important; }
+.mt-lg { margin-top: var(--spacing-lg) !important; }
+.mt-xl { margin-top: var(--spacing-xl) !important; }
+
+.pt-sm { padding-top: var(--spacing-sm) !important; }
+.pt-md { padding-top: var(--spacing-md) !important; }
+.pt-lg { padding-top: var(--spacing-lg) !important; }
+
+.pb-sm { padding-bottom: var(--spacing-sm) !important; }
+.pb-md { padding-bottom: var(--spacing-md) !important; }
+.pb-lg { padding-bottom: var(--spacing-lg) !important; }
+
+/* ヘッダースタイル */
+header {
+  padding: var(--spacing-lg) 0;
+  background: linear-gradient(to bottom, var(--color-bg-lighter), var(--color-white));
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .title {
-  padding-top:25px;
-  font-size:35px;
+  padding-top: var(--spacing-sm);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-tight);
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
 .title a {
-  text-decoration:none;
-  color: #333;
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
+}
+
+.title a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: none;
 }
 
 .subTitle {
-  padding-top:47px;
-  font-size:15px;
+  padding-top: var(--spacing-lg);
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-light);
+  margin-bottom: 0;
 }
 
 .tel {
-  padding-top:15px;
-  margin-bottom:0;
-  font-size:22px;
+  padding-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-normal);
+  font-weight: bold;
+  color: var(--color-accent);
 }
 
 .name {
-  font-size:17px;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text-light);
+  margin-bottom: 0;
 }
 
-.footer .row{
-  color: white;
-  padding:10px;
-  background-color: #27ae60;
+/* フッタースタイル */
+.footer {
+  margin-top: var(--spacing-xl);
 }
 
+.footer .row {
+  color: var(--color-white);
+  padding: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  text-align: center;
+  font-size: var(--font-size-small);
+  border-radius: 0 0 8px 8px;
+}
+
+/* ナビゲーションスタイル */
 .nav {
-  font-size:19px;
+  font-size: var(--font-size-large);
+  margin-top: var(--spacing-sm);
 }
 
 .nav .nav-link {
-  color:#e04a3f;
+  color: var(--color-accent);
   background-color: transparent;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  padding: var(--spacing-sm) var(--spacing-md);
 }
 
 .nav .nav-link.active {
-  color:#e04a3f!important;
-  background-color:#ffebdb!important;
+  color: var(--color-accent) !important;
+  background-color: var(--color-bg-accent) !important;
+  font-weight: 600;
+  border-left: 4px solid var(--color-primary);
 }
 
 .nav .nav-link:hover {
-  color:#e04a3f!important;
-  background-color:#ffebdb!important;
+  color: var(--color-accent) !important;
+  background-color: var(--color-bg-lighter) !important;
+  transform: translateX(4px);
 }
 
 .nav .nav-link:focus {
-  color:#e04a3f!important;
-  background-color:#ffebdb!important;
+  color: var(--color-accent) !important;
+  background-color: var(--color-bg-accent) !important;
 }
 
 /* Bootstrap 5で削除されたthumbnailクラスの代替 */
@@ -78,13 +246,18 @@ body {
   padding: 4px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-md);
   line-height: 1.42857143;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
   border-radius: 4px;
   text-align: center;
   max-width: 300px;
+  transition: box-shadow 0.3s ease;
+}
+
+.thumbnail:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .thumbnail img {
@@ -93,18 +266,34 @@ body {
   display: inline-block;
 }
 
+.main {
+  padding: 0 var(--spacing-md);
+}
+
 .main-title {
-  font-size:25px;
-  border-bottom: solid 3px #27ae60;
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-tight);
+  border-bottom: solid 3px var(--color-primary);
+  margin-bottom: var(--spacing-md);
+  margin-top: var(--spacing-lg);
+  padding-bottom: var(--spacing-xs);
+}
+
+.main-title:first-child {
+  margin-top: 0;
 }
 
 .sub-title {
-  font-size:23px;
-  padding-left:15px;
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-normal);
+  padding-left: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
 }
 
 .mylist li {
   list-style-type: none;
+  margin-bottom: var(--spacing-xs);
+  line-height: var(--line-height-relaxed);
 }
 
 .mylist li:before {
@@ -113,29 +302,92 @@ body {
   height: 6px;
   display: inline-block;
   border-radius: 100%;
-  background: #20B97B;
+  background: var(--color-primary);
   position: relative;
   left: -15px;
   top: -3px;
 }
 
 .infoLeft {
-  font-size:16px;
-  padding-left:40px!important;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-normal);
+  padding-left: var(--spacing-lg) !important;
+  font-weight: 600;
 }
 
 .infoRight {
-  font-size:16px;
-  padding-left:40px!important;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  padding-left: var(--spacing-lg) !important;
 }
 
 #mapCanvas {
-  margin:20px;
-  height:500px;
+  margin: var(--spacing-md);
+  height: 500px;
 }
 
+/* テーブルスタイル */
+.table {
+  border-color: var(--color-border);
+}
+
+.table td[bgcolor] {
+  background-color: var(--color-bg-light) !important;
+}
+
+/* ユーティリティクラス */
+.text-primary { color: var(--color-primary) !important; }
+.text-accent { color: var(--color-accent) !important; }
+.text-muted { color: var(--color-text-light) !important; }
+
+.bg-light { background-color: var(--color-bg-lighter) !important; }
+.bg-primary { background-color: var(--color-primary) !important; color: var(--color-white) !important; }
+
+.border { border: 1px solid var(--color-border) !important; }
+.border-radius { border-radius: 4px; }
+
+/* レスポンシブ: スマホ表示 */
 @media screen and (min-width: 0px) and (max-width : 767px){
+    body {
+        padding: var(--spacing-sm) var(--spacing-xs) !important;
+    }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+        border-radius: 4px;
+    }
+
+    header {
+        padding: var(--spacing-md) 0;
+    }
+
+    .content {
+        padding: var(--spacing-md) 0;
+    }
+
     p, li {
-        font-size:18px;
+        font-size: var(--font-size-large);
+        line-height: var(--line-height-relaxed);
+    }
+
+    h1, .h1 {
+        font-size: 28px;
+    }
+
+    h2, .h2 {
+        font-size: 22px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .tel {
+        font-size: 20px;
+    }
+
+    .subTitle {
+        padding-top: var(--spacing-md);
+        font-size: 13px;
     }
 }

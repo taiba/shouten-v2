@@ -6,26 +6,20 @@ jsfile: <script src="/assets/js/my.js"></script>
 
 <style>
 table td {
-  padding:10px;
-}
-
-/* Bootstrap 5でbgcolor属性を有効にする */
-table td[bgcolor] {
-  background-color: #fcefe5 !important;
+  padding: var(--spacing-sm);
 }
 </style>
 
 <h1 class="main-title">ご注文方法</h1>
-<p>お電話・FAX・メールでご注文を承ります。</p>
+<p class="mb-md">お電話・FAX・メールでご注文を承ります。</p>
 
-<table class="table table-bordered">
+<table class="table table-bordered mb-md">
   <tr><td width="80px" bgcolor="#fcefe5">電話番号</td><td width="130px">0276-88-5278<br>(受付時間：午前9時から午後6時)</td></tr>
   <tr><td bgcolor="#fcefe5">FAX番号</td><td>0276-88-5278<br>(受付時間：午前9時から午後6時)</td></tr>
   <tr><td bgcolor="#fcefe5">メール</td><td><span id="email-link"></span><br>(受付時間：24時間)</td></tr>
 </table>
-<br>
 
-<p style="padding-top:20px">FAX&amp;メールでご注文の際は、お手数ですが、下記の内容を明記の上、お送りください。</p>
+<p class="pt-md">FAX&amp;メールでご注文の際は、お手数ですが、下記の内容を明記の上、お送りください。</p>
 
 <table class="table table-bordered" cellspacing="1" cellpadding="5">
   <tbody>
