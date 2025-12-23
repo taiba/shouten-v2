@@ -8,12 +8,17 @@ jsfile: <script src="/assets/js/my.js"></script>
 table td {
   padding:10px;
 }
+
+/* Bootstrap 5でbgcolor属性を有効にする */
+table td[bgcolor] {
+  background-color: #fcefe5 !important;
+}
 </style>
 
 <h1 class="main-title">ご注文方法</h1>
 <p>お電話・FAX・メールでご注文を承ります。</p>
 
-<table border="1">
+<table class="table table-bordered">
   <tr><td width="80px" bgcolor="#fcefe5">電話番号</td><td width="130px">0276-88-5278<br>(受付時間：午前9時から午後6時)</td></tr>
   <tr><td bgcolor="#fcefe5">FAX番号</td><td>0276-88-5278<br>(受付時間：午前9時から午後6時)</td></tr>
   <tr><td bgcolor="#fcefe5">メール</td><td><span id="email-link"></span><br>(受付時間：24時間)</td></tr>
@@ -22,7 +27,7 @@ table td {
 
 <p style="padding-top:20px">FAX&amp;メールでご注文の際は、お手数ですが、下記の内容を明記の上、お送りください。</p>
 
-<table border="1" cellspacing="1" cellpadding="5" border="0">
+<table class="table table-bordered" cellspacing="1" cellpadding="5">
   <tbody>
     <tr>
       <td rowspan="5" nowrap bgcolor="#fcefe5"><div align="center"><span>ご<br />
@@ -96,7 +101,7 @@ table td {
 
 <p>代引き手数料は、お客さまのご負担となります。</p>
 
-<table border="1">
+<table class="table table-bordered">
   <tr><td width="80px" bgcolor="#fcefe5">注文金額(送料を除く)</td><td width="130px" bgcolor="#fcefe5">手数料</td>
   <tr><td>1万円未満</td><td>300円</td></tr>
   <tr><td>1万円以上～3万円未満</td><td>400円</td></tr>
@@ -112,7 +117,7 @@ table td {
 <p>送料は、ヤマト運輸の宅急便運賃表に準じて別途かかります。お届け先、商品梱包点数、梱包の大きさや重量によって異なります。お届け先１ヶ所につき、下記の送料となります。</p>
 
 <p>■サイズ８０（3辺計80cm迄・重量5kg迄）の場合</p>
-<table border="1">
+<table class="table table-bordered">
   <tr><td width="280px" bgcolor="#fcefe5">関東、信越、北陸、中部、南東北</td><td width="100px">1,067円</td>
   <tr><td width="280px" bgcolor="#fcefe5">北東北、関西</td><td width="100px">1,188円</td>
   <tr><td width="280px" bgcolor="#fcefe5">中国</td><td width="100px">1,320円</td>

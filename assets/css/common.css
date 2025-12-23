@@ -52,18 +52,39 @@ body {
   font-size:19px;
 }
 
-.nav a {
+.nav .nav-link {
   color:#e04a3f;
 }
 
-.nav li.active a {
+.nav .nav-link.active {
   color:#e04a3f!important;
   background-color:#ffebdb!important;
 }
 
-.nav a:hover {
+.nav .nav-link:hover {
   color:#e04a3f!important;
   background-color:#ffebdb!important;
+}
+
+/* Bootstrap 5で削除されたthumbnailクラスの代替 */
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  max-width: 300px;
+}
+
+.thumbnail img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
 }
 
 .main-title {
