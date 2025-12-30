@@ -155,32 +155,42 @@ p {
 
 /* ヘッダースタイル */
 header {
-  padding: var(--spacing-lg) 0;
+  padding: var(--spacing-sm) 0;
   background: linear-gradient(to bottom, var(--color-bg-lighter), var(--color-white));
   border-bottom: 3px solid var(--color-primary);
 }
 
 .title {
-  padding-top: var(--spacing-sm);
   font-size: var(--font-size-h1);
   line-height: var(--line-height-tight);
   font-weight: bold;
-  margin-bottom: 0;
+  margin-bottom: var(--spacing-xs);
 }
 
 .title a {
   text-decoration: none;
-  color: var(--color-primary);
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .title a:hover {
-  color: var(--color-primary-dark);
   text-decoration: none;
+  opacity: 0.85;
+}
+
+/* ロゴ画像スタイル */
+.logo-image {
+  height: 85px;
+  width: auto;
+  display: block;
+  transition: opacity 0.3s ease;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
+}
+
+.logo-image:hover {
+  opacity: 0.9;
 }
 
 .subTitle {
-  padding-top: var(--spacing-lg);
   font-size: var(--font-size-small);
   line-height: var(--line-height-normal);
   color: var(--color-text-light);
@@ -188,12 +198,11 @@ header {
 }
 
 .tel {
-  padding-top: var(--spacing-sm);
-  margin-bottom: var(--spacing-xs);
   font-size: var(--font-size-h2);
   line-height: var(--line-height-normal);
   font-weight: bold;
   color: var(--color-accent);
+  margin-bottom: var(--spacing-xs);
 }
 
 .name {
@@ -371,7 +380,11 @@ header {
     }
 
     header {
-        padding: var(--spacing-md) 0;
+        padding: var(--spacing-sm) 0;
+    }
+
+    header .row > div {
+        text-align: center !important;
     }
 
     .content {
@@ -392,15 +405,23 @@ header {
     }
 
     .title {
-        font-size: 30px;
+        font-size: 28px;
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .logo-image {
+        height: 70px;
+        margin: 0 auto;
     }
 
     .tel {
         font-size: 22px;
+        margin-top: var(--spacing-sm);
+        margin-bottom: var(--spacing-xs);
     }
 
     .subTitle {
-        padding-top: var(--spacing-md);
         font-size: 14px;
+        margin-bottom: var(--spacing-xs);
     }
 }
