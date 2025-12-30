@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120" width="400" height="120">
+  <defs>
+    <linearGradient id="charGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C5530;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a3320;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="charGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A7C4E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2C5530;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4A574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B8864F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- 相 - 特別な装飾 -->
+  <text x="60" y="65" font-family="'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="60" font-weight="900" fill="url(#charGrad1)">
+    相
+  </text>
+  
+  <!-- 場 -->
+  <text x="130" y="65" font-family="'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="60" font-weight="900" fill="url(#charGrad2)">
+    場
+  </text>
+  
+  <!-- 商 - アクセントカラー -->
+  <text x="200" y="65" font-family="'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="60" font-weight="900" fill="url(#accentGrad)">
+    商
+  </text>
+  
+  <!-- 店 -->
+  <text x="270" y="65" font-family="'Noto Sans JP', 'Yu Gothic', sans-serif" font-size="60" font-weight="900" fill="url(#charGrad1)">
+    店
+  </text>
+  
+  <!-- 下線アクセント -->
+  <line x1="50" y1="80" x2="310" y2="80" stroke="url(#accentGrad)" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- サブテキスト -->
+  <text x="200" y="105" font-family="'Noto Sans JP', sans-serif" font-size="16" text-anchor="middle" fill="#6B8E23" letter-spacing="0.5">
+    谷中観音堂の前の煎餅屋さん
+  </text>
+</svg>
