@@ -169,26 +169,15 @@ header {
 
 .title a {
   text-decoration: none;
-  transition: all 0.3s ease;
+  color: var(--color-primary);
+  transition: color 0.3s ease;
 }
 
 .title a:hover {
+  color: var(--color-primary-dark);
   text-decoration: none;
-  opacity: 0.85;
 }
 
-/* ロゴ画像スタイル */
-.logo-image {
-  height: 85px;
-  width: auto;
-  display: block;
-  transition: opacity 0.3s ease;
-  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.1));
-}
-
-.logo-image:hover {
-  opacity: 0.9;
-}
 
 .subTitle {
   font-size: var(--font-size-small);
@@ -409,10 +398,6 @@ header {
         margin-bottom: var(--spacing-xs);
     }
 
-    .logo-image {
-        height: 70px;
-        margin: 0 auto;
-    }
 
     .tel {
         font-size: 22px;
